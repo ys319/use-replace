@@ -30,7 +30,7 @@ await build({
 
     // Deno
     importMap: "deno.jsonc",
-    packageManager: "pnpm",
+    packageManager: "npm",
 
     // Tests
     test: false,
