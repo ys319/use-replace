@@ -1,6 +1,6 @@
-# React "useReplace" hook.
+# useReplace
 
-Replace string with component using regexp.
+React hook for Replace string with component using regexp.
 
 ## Example
 

@@ -3,17 +3,16 @@ import { PackageJson } from "https://deno.land/x/dnt@0.40.0/mod.ts"
 type PackageInput = {
     repo: string
     description: string
-    version: string
     license: string
-    author: PackageJson["author"]
     keywords: string[]
+    author: PackageJson["author"]
 }
 
 export const createPackage = (input: PackageInput): PackageJson => ({
 
     // Required
     name: `@${input.repo}`,
-    version: input.version,
+    version: Deno.args[0]?.replace(/^v/, ""),
 
     // Detail
     description: input.description,
